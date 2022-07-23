@@ -8,7 +8,10 @@ def guess(maximum_value):
     user_response = " "
 
     while user_response != "c":
-        computer_guess_value = random.randint(min, max)
+        if min != max:
+            computer_guess_value = random.randint(min, max)
+        else: 
+            computer_guess_value = min
 
         user_response = input(f"Is the number in your head {computer_guess_value}? Enter correct(c), too high(h), or too low(l): ").lower()
 
